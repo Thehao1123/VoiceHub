@@ -30,13 +30,13 @@ jobs:
 
     steps:
       - name: 检出触发分支
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: ${{ env.CHECKOUT_REPOSITORY }}
           ref: ${{ env.TARGET_BRANCH }}
 
       - name: 安装 Nix
-        uses: DeterminateSystems/determinate-nix-action@v3
+        uses: DeterminateSystems/determinate-nix-action@v3.21.8
 
       - name: 配置 Git 提交身份
         run: |
